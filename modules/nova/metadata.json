@@ -1,0 +1,282 @@
+{
+  "name": "puppetlabs-nova",
+  "author": "Puppet Labs",
+  "description": "Puppet module to install and configure the OpenStack Nova compute service",
+  "license": "Apache License 2.0",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-nova",
+  "source": "https://github.com/puppetlabs/puppetlabs-nova",
+  "summary": "Puppet Labs Nova Module",
+  "version": "1.0.1",
+  "checksums": {
+    "CHANGELOG": "0702ebeea88a24b0d0256a73964832c2",
+    "LICENSE": "0e5ccf641e613489e66aa98271dbe798",
+    "Modulefile": "f1cc1086f3e8c8ed6e3e1b5c5faa365f",
+    "README": "09b6d1da83a9f0027a627eb98578a2ce",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "TODO": "0ba895fb7c42ed3e0f6e6b144a8582d6",
+    "examples\\all.pp": "0ebeb9571223b167ab2f93bf3e92b6d5",
+    "examples\\multi.pp": "b9c8046330d2525879779b6a56ff0e9e",
+    "examples\\site.pp": "ff53b9775419dc1b1801b8a23a88f6e0",
+    "ext\\nova.sh": "3bd5819a16236d609171cf7c9606c782",
+    "files\\compute.py": "0c7b6c9a403cafa741012772f32fa2ea",
+    "files\\connection.py": "04aef15bba6529d0cabeb7220fbde470",
+    "files\\nova-novncproxy.init": "c1ccca41bb05a1dd8d044900aeebdb80",
+    "lib\\puppet\\provider\\nova_admin\\nova_manage.rb": "c0978afcbe3dac5ebd57d4dbb354bde0",
+    "lib\\puppet\\provider\\nova_config\\parsed.rb": "f94166a2c22da3af096b80b586c20bf7",
+    "lib\\puppet\\provider\\nova_config\\parsed_config.rb": "52dcd21658d9e6f842bf72af5a3113e4",
+    "lib\\puppet\\provider\\nova_floating\\nova_manage.rb": "f4eaf0442243c71da12d9fe87fc56bb2",
+    "lib\\puppet\\provider\\nova_network\\nova_manage.rb": "fb618e17c49c392e0f3ef3137c3b03b8",
+    "lib\\puppet\\provider\\nova_paste_api_ini\\ini_setting.rb": "16b55c7213f6dfc37e30f5ba7f2f335a",
+    "lib\\puppet\\provider\\nova_project\\nova_manage.rb": "ce8d1b84545b9f9b6c5904b25997a7a0",
+    "lib\\puppet\\type\\nova_admin.rb": "4c9c145848c936a67585f5d42e805f9b",
+    "lib\\puppet\\type\\nova_config.rb": "1e3412154c05cf1eb40d8d84d6bc1004",
+    "lib\\puppet\\type\\nova_floating.rb": "e591744974507adc4daac641cf4ebf19",
+    "lib\\puppet\\type\\nova_network.rb": "f121774b71ec3074dc176e73271c78a3",
+    "lib\\puppet\\type\\nova_paste_api_ini.rb": "8747ab9306b080a6bae7ec5cd8e4b840",
+    "lib\\puppet\\type\\nova_project.rb": "e75354751a78bf2a395529eb10a8835f",
+    "manifests\\api.pp": "c702c7cc1baaf32ff8f517d39f9b6343",
+    "manifests\\cert.pp": "1623f9eb7104d07a2782757a2ee09b4b",
+    "manifests\\client.pp": "556bfd8ece2f3a8b797262c01ba43e86",
+    "manifests\\compute.pp": "ef2e2d2d28056701c897f4fe03159511",
+    "manifests\\compute\\file_hack.pp": "88c6415df26e1cc8ad5c158d86913006",
+    "manifests\\compute\\libvirt.pp": "401bac7cd7862323372635550b702828",
+    "manifests\\compute\\quantum.pp": "5a8af4086a74c7aecf09099731d30a98",
+    "manifests\\compute\\xenserver.pp": "2d58c894be40e2507ac00093348ee79b",
+    "manifests\\consoleauth.pp": "e36248791404a9c234bb062a310cc152",
+    "manifests\\db\\mysql.pp": "4dff5fec57d13b7271340f23cd830fd4",
+    "manifests\\db\\mysql\\host_access.pp": "bf0f88048d291947aabc02e850866a18",
+    "manifests\\generic_service.pp": "2cb94e7df3e79d974263ac3dad362549",
+    "manifests\\init.pp": "9c929d469f753f20e66b3a6a7aaf1085",
+    "manifests\\keystone\\auth.pp": "07210d2207b5454a80501750a0608c90",
+    "manifests\\manage\\floating.pp": "dadf2a2dfda390c9489aa8f8e94e5e13",
+    "manifests\\manage\\network.pp": "f5d43136436f044576f02a1745dc1f57",
+    "manifests\\migration\\libvirt.pp": "6f65c565346d771c53fef7da770e85be",
+    "manifests\\network.pp": "c73350b8a861caf7d7db8744ffcb16cf",
+    "manifests\\network\\bridge.pp": "e38af04556d562871614ab8314938c31",
+    "manifests\\network\\flat.pp": "f35e6583f48bcfd48a6d8067ea3b6840",
+    "manifests\\network\\flatdhcp.pp": "14931beab4c0cede5fa362031dc6eea2",
+    "manifests\\network\\quantum.pp": "633e6912041f3ec0c348fa568276b336",
+    "manifests\\network\\vlan.pp": "5c0558453841b69d868b169cbc181c77",
+    "manifests\\objectstore.pp": "d381898113ae999d97ad9690cafab70b",
+    "manifests\\params.pp": "52cb5066bb03615639ddda74b6bdf72d",
+    "manifests\\quota.pp": "004976357a6f38e903daab1cba3d508f",
+    "manifests\\rabbitmq.pp": "27b611760aa8675caa926f725b587b93",
+    "manifests\\scheduler.pp": "6726acc9936c7b9571a1ee32dd0404e7",
+    "manifests\\utilities.pp": "b1962f837836898919509ba266d353f4",
+    "manifests\\vncproxy.pp": "3a1091eb2a445845b49b00adc91fc0c5",
+    "manifests\\volume.pp": "444f7283c96683e6d4b318be49af7ccd",
+    "manifests\\volume\\iscsi.pp": "76f385dca0c3c4bf5bc1db8d653789e9",
+    "spec\\classes\\nova_api_spec.rb": "b69bf3bb4e31cf0ab11a14c5d5516ee9",
+    "spec\\classes\\nova_cert_spec.rb": "e7c7ca8613aa959214f9d3a9239f9926",
+    "spec\\classes\\nova_client_spec.rb": "f2937e57585102a6a1abec5dd88be731",
+    "spec\\classes\\nova_compute_quantum_spec.rb": "4f057a1bbdba74b7193dc90419b09b84",
+    "spec\\classes\\nova_compute_spec.rb": "c2ec457e40007405b8e33cddab47dbed",
+    "spec\\classes\\nova_consoleauth_spec.rb": "e1ef209b8fcf0e0448908dc9cab3df98",
+    "spec\\classes\\nova_db_mysql_spec.rb": "92b970b58cc897e740e7c1fe3f7da4de",
+    "spec\\classes\\nova_init_spec.rb": "5f7e5288d63b7ea8b676e9b7b5500297",
+    "spec\\classes\\nova_keystone_endpoint_spec.rb": "4e7579406e7b3241dba55fdfe177cbad",
+    "spec\\classes\\nova_network_flat_spec.rb": "f324b13998cb1de4fe9e693045efba15",
+    "spec\\classes\\nova_network_flatdhcp_spec.rb": "26130efa290fd940436ddd305f666ac8",
+    "spec\\classes\\nova_network_spec.rb": "35efff3e872e573cca67b7147d4fcf3a",
+    "spec\\classes\\nova_network_vlan_spec.rb": "0e65a8224ff7fe9eaa2fda0514b07a1f",
+    "spec\\classes\\nova_objectstore_spec.rb": "ccc25061c7cb9353f4e29dc284a117b8",
+    "spec\\classes\\nova_rabbitmq_spec.rb": "f323ac9cd087b001881ffa99fb4aa0ca",
+    "spec\\classes\\nova_scheduler_spec.rb": "b134c6ff228d9058fa323940f45828d0",
+    "spec\\classes\\nova_vnc_proxy_spec.rb": "2e1b7c933b1f13de99a0c87fcc703bf2",
+    "spec\\classes\\nova_volume_iscsi_spec.rb": "a9ca398e8873b17563447ff9f69752c8",
+    "spec\\classes\\nova_volume_spec.rb": "f54b9956027b91ee7059c34b4a4ce13b",
+    "spec\\defines\\nova_manage_networks.rb": "ec8d995916b68be7087cd6ea651cf2cb",
+    "spec\\spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec\\unit\\provider\\nova_config\\parsed_spec.rb": "818e83687f5059b6d454018beb722d66",
+    "spec\\unit\\type\\nova_config_spec.rb": "adefe14f25f17c523e165a2b0aa268b6"
+  },
+  "types": [
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the admins."
+        }
+      ],
+      "providers": [
+        {
+          "name": "nova_manage",
+          "doc": "Manage nova admin user"
+        }
+      ],
+      "name": "nova_admin",
+      "doc": "Manage creation/deletion of nova admin users."
+    },
+    {
+      "parameters": [
+        {
+          "name": "name"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value"
+        },
+        {
+          "name": "target",
+          "doc": "Path to our nova config file"
+        }
+      ],
+      "providers": [
+        {
+          "name": "parsed"
+        },
+        {
+          "name": "configfile"
+        }
+      ],
+      "name": "nova_config"
+    },
+    {
+      "parameters": [
+        {
+          "name": "network",
+          "doc": "Network (ie, 192.168.1.0/24 or 192.168.1.128/25 etc.)"
+        }
+      ],
+      "providers": [
+        {
+          "name": "nova_manage",
+          "doc": "Manage nova floating"
+        }
+      ],
+      "name": "nova_floating",
+      "doc": "Manage creation/deletion of nova floating ip ranges. "
+    },
+    {
+      "parameters": [
+        {
+          "name": "network",
+          "doc": "IPv4 Network (ie, 192.168.1.0/24)"
+        },
+        {
+          "name": "label",
+          "doc": "The Nova network label"
+        },
+        {
+          "name": "num_networks",
+          "doc": "Number of networks to create"
+        },
+        {
+          "name": "bridge",
+          "doc": "bridge to use for flat network"
+        },
+        {
+          "name": "project",
+          "doc": "project that the network is associated with"
+        },
+        {
+          "name": "gateway"
+        },
+        {
+          "name": "dns2"
+        },
+        {
+          "name": "vlan_start"
+        },
+        {
+          "name": "network_size"
+        }
+      ],
+      "providers": [
+        {
+          "name": "nova_manage",
+          "doc": "Manage nova network"
+        }
+      ],
+      "name": "nova_network",
+      "doc": "Manage creation/deletion of nova networks.  During creation, network\n          CIDR and netmask will be calculated automatically"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from nova/paste-api.ini"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "nova_paste_api_ini"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the project."
+        },
+        {
+          "name": "owner",
+          "doc": "Owner of this project. *This is only set on project creation*"
+        }
+      ],
+      "providers": [
+        {
+          "name": "nova_manage",
+          "doc": "Manage nova project"
+        }
+      ],
+      "name": "nova_project",
+      "doc": "Manage creation/deletion of nova projects."
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": "\u003e\u003d0.0.4"
+    },
+    {
+      "name": "puppetlabs/glance",
+      "version_requirement": "\u003e\u003d1.0.0"
+    },
+    {
+      "name": "puppetlabs/keystone",
+      "version_requirement": "\u003e\u003d1.0.1"
+    },
+    {
+      "name": "puppetlabs/cinder",
+      "version_requirement": "\u003e\u003d1.0.1"
+    },
+    {
+      "name": "puppetlabs/mysql",
+      "version_requirement": "\u003e\u003d0.5.0"
+    },
+    {
+      "name": "puppetlabs/rabbitmq",
+      "version_requirement": "\u003e\u003d2.0.2"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d2.4.0"
+    },
+    {
+      "name": "duritong/sysctl",
+      "version_requirement": "\u003e\u003d0.0.1"
+    },
+    {
+      "name": "cprice404/inifile",
+      "version_requirement": "\u003e\u003d0.9.0"
+    },
+    {
+      "name": "saz/memcached",
+      "version_requirement": "\u003d\u003d2.0.4"
+    },
+    {
+      "name": "puppetlabs/horizon",
+      "version_requirement": "\u003d\u003d1.0.0"
+    }
+  ]
+}

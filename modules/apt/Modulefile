@@ -1,0 +1,10 @@
+name 'puppetlabs-apt'
+version '1.0.1'
+
+author 'Evolving Web / Puppet Labs'
+license 'Apache License 2.0'
+project_page 'https://github.com/puppetlabs/puppetlabs-apt'
+source 'https://github.com/puppetlabs/puppetlabs-apt'
+summary 'Puppet Labs Apt Module'
+description 'APT Module for Puppet'
+dependency 'puppetlabs/stdlib', '>=2.2.1'

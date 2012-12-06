@@ -1,0 +1,11 @@
+name 'puppetlabs-postgresql'
+version '1.0.0'
+
+author 'Inkling/Puppet Labs'
+license 'Apache'
+project_page 'https://github.com/puppetlabs/puppet-postgresql/issues'
+source 'git://github.com/puppetlabs/puppet-postgresql.git'
+summary 'PostgreSQL defined resource types'
+description 'PostgreSQL defined resource types'
+dependency 'puppetlabs/firewall', '>=0.0.4'
+dependency 'puppetlabs/stdlib', '==3.2.0'

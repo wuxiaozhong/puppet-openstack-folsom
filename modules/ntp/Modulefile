@@ -1,0 +1,10 @@
+name 'puppetlabs-ntp'
+version '0.1.0'
+
+author 'Puppet Labs'
+license 'Apache Version 2.0'
+project_page 'http://github.com/puppetlabs/puppetlabs-ntp'
+source 'git://github.com/puppetlabs/puppetlabs-ntp'
+summary 'NTP Module'
+description 'NTP Module for Debian, Ubuntu, CentOS, RHEL, OEL, Fedora & FreeBSD'
+dependency 'puppetlabs/stdlib', '>=0.1.6'
