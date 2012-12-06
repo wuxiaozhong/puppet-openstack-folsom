@@ -1,0 +1,223 @@
+{
+  "name": "puppetlabs-glance",
+  "author": "Puppet Labs",
+  "description": "Openstack Glance module for folsom. Tested on Ubuntu Precise and RHEL6",
+  "license": "Apache",
+  "project_page": "http://github.com/puppetlabs/puppetlabs-glance",
+  "source": "git://github.com/puppetlabs/puppetlabs-glance",
+  "summary": "Glance Puppet Module",
+  "version": "1.0.0",
+  "checksums": {
+    "CHANGELOG": "675692c4eede4bb54832fbab976321a3",
+    "LICENSE": "0e5ccf641e613489e66aa98271dbe798",
+    "Modulefile": "71db0d3c7e7b2c36285c0330257a328e",
+    "README.markdown": "879792d3b5407f32845490ff858f1ea1",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "TODO": "19e3ff44c7aba3425932fbcb4b22ca89",
+    "examples\\site.pp": "d6eaad90f5c9e8dce311086fc9c0f8a1",
+    "ext\\glance.rb": "d18e56aa4ec3c74d709927d74e413eb0",
+    "ext\\glance.sh": "d4a51eea6741cadfcc699daf376e3528",
+    "lib\\puppet\\provider\\glance.rb": "bae2e968a6f086132b46676236c2e19e",
+    "lib\\puppet\\provider\\glance_api_config\\ini_setting.rb": "7c4962b5b0ec6dac0eb5233551a38faf",
+    "lib\\puppet\\provider\\glance_api_paste_ini\\ini_setting.rb": "fa35c61e8e46f6081a53f22ea42db914",
+    "lib\\puppet\\provider\\glance_cache_config\\ini_setting.rb": "a6632f7e4aa31f3d570d5f4ad1ddec32",
+    "lib\\puppet\\provider\\glance_image\\glance.rb": "9ec454107ad763f5a2cbdf918b1009bd",
+    "lib\\puppet\\provider\\glance_registry_config\\ini_setting.rb": "f144068115a5fc9e7e55549af5d28890",
+    "lib\\puppet\\provider\\glance_registry_paste_ini\\ini_setting.rb": "b62c60c370ba66d8774877e152218cc5",
+    "lib\\puppet\\type\\glance_api_config.rb": "f1f2d33fbe4d7108e23df15c399594c0",
+    "lib\\puppet\\type\\glance_api_paste_ini.rb": "70649e8c7d31bf20c50e322314eed312",
+    "lib\\puppet\\type\\glance_cache_config.rb": "2a44120804788cf99305a3afd17cd83b",
+    "lib\\puppet\\type\\glance_image.rb": "6bb843775b38cae1910c41d60ff17c00",
+    "lib\\puppet\\type\\glance_registry_config.rb": "744ec3d21309a63be8baa191a5f95c94",
+    "lib\\puppet\\type\\glance_registry_paste_ini.rb": "5cb409425bb286ec677c8a36f95236b5",
+    "manifests\\api.pp": "3db9d9d47de8739c3be0c6832ba331b3",
+    "manifests\\backend\\file.pp": "42be460e439b1c59de613fa40b243a8c",
+    "manifests\\backend\\swift.pp": "f9b0690cf809e2e99f6c8b00b1331b0d",
+    "manifests\\client.pp": "a50126f2d5281dd7650d17fce39eaadd",
+    "manifests\\db\\mysql.pp": "ae669254e82034aca3feb30311138b51",
+    "manifests\\db\\mysql\\host_access.pp": "6f1ad8adefd39eee6ec0ffd45417c97e",
+    "manifests\\init.pp": "806006db3969bf9c452775a5a21adde6",
+    "manifests\\keystone\\auth.pp": "c4b2cd6a3b0abedb143c8cae3d69cce7",
+    "manifests\\notify\\qpid.pp": "4402760080c99111e41391549e87536c",
+    "manifests\\notify\\rabbitmq.pp": "b9f2c42564c1a30093e2a58cf2aadcc7",
+    "manifests\\params.pp": "5f69c719676a3731ef0b15311480a6cc",
+    "manifests\\registry.pp": "eac29b85524a2ba8492157c02df2d4f0",
+    "manifests\\scrubber.pp": "dfada3bdee94f56bca3f80f543382c4a",
+    "spec\\classes\\glance_api_spec.rb": "b9b1cbaef79b8dbe0fdb10849a60091c",
+    "spec\\classes\\glance_backend_file_spec.rb": "f83f039ca8c3c56e7e8a78c7af549cbf",
+    "spec\\classes\\glance_backend_swift_spec.rb": "2f81985ec77c4645f37a318a82d31dda",
+    "spec\\classes\\glance_client_spec.rb": "0d50df9f25e86cb047749085978c7ad0",
+    "spec\\classes\\glance_db_mysql_spec.rb": "58e5c7d0057aa1b81e204f40a05f9955",
+    "spec\\classes\\glance_keystone_auth_spec.rb": "f20d00c4cf37364a3b65e8c537def118",
+    "spec\\classes\\glance_notify_qpid_spec.rb": "a73e4a4aae85d8b595d6938bed12e730",
+    "spec\\classes\\glance_notify_rabbitmq_spec.rb": "aea0f00e3508de4e48103165c74e1176",
+    "spec\\classes\\glance_registry_spec.rb": "1c44ce310913273a19137bcaa08b86ef",
+    "spec\\classes\\glance_spec.rb": "127ba483b62e5d46281c2660e6b41873",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec\\spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "tests\\api.pp": "10484d7e02fc3c20f19e1e2aa6a9cd0c",
+    "tests\\init.pp": "0df45b7489688f7cfde9231466305ffe",
+    "tests\\registry.pp": "ac0432850e904e39908265c117917061"
+  },
+  "types": [
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from glance-api.conf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "glance_api_config"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from glance-api-paste.ini"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "glance_api_paste_ini"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from glance-cache.conf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "glance_cache_config"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The image name"
+        },
+        {
+          "name": "source",
+          "doc": "The source of the image to import from"
+        }
+      ],
+      "properties": [
+        {
+          "name": "id",
+          "doc": "The unique id of the image"
+        },
+        {
+          "name": "location",
+          "doc": "The permanent location of the image. Optional"
+        },
+        {
+          "name": "is_public",
+          "doc": "Whether the image is public or not. Default true"
+        },
+        {
+          "name": "container_format",
+          "doc": "The format of the container"
+        },
+        {
+          "name": "disk_format",
+          "doc": "The format of the disk"
+        }
+      ],
+      "providers": [
+        {
+          "name": "glance",
+          "doc": "    Glance provider to manage glance_image type.\n\n    Assumes that the glance-api service is on the same host and is working.\n"
+        }
+      ],
+      "name": "glance_image"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from glance-registry.conf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "glance_registry_config"
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Section/setting name to manage from glance-registry-paste.ini"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ini_setting"
+        }
+      ],
+      "name": "glance_registry_paste_ini"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "cprice404/inifile",
+      "version_requirement": "\u003e\u003d0.9.0"
+    },
+    {
+      "name": "puppetlabs/keystone",
+      "version_requirement": "\u003e\u003d1.0.1"
+    },
+    {
+      "name": "puppetlabs/mysql",
+      "version_requirement": "\u003e\u003d0.5.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d2.4.0"
+    }
+  ]
+}

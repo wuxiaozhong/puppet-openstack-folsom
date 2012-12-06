@@ -1,0 +1,40 @@
+{
+  "name": "puppetlabs-horizon",
+  "author": "Puppet Labs",
+  "description": "",
+  "license": "Apache License 2.0",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-horizon",
+  "source": "https://github.com/puppetlabs/puppetlabs-horizon",
+  "summary": "Horizon Dashboard Folsom Module for Puppet",
+  "version": "1.0.0",
+  "checksums": {
+    "CHANGELOG": "47be4cd116983c585be328dd270f7ad5",
+    "LICENSE": "b3f8a01d8699078d82e8c3c992307517",
+    "Modulefile": "3bc0a83a12a9b95e2dbf97e936719a77",
+    "README.md": "02fe6d03879d8ede05a3f7187b239f2b",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "manifests\\init.pp": "19d48840f7ae66c631b4e4deda1e34a3",
+    "manifests\\params.pp": "7fae92d39e286aceffff6a585d575e6e",
+    "spec\\classes\\horizon_init_spec.rb": "a2b081a0672f4e9c0beec50b0dba902f",
+    "spec\\spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "templates\\local_settings.py.erb": "9c9078c2d59e31e569460f0a9400b12f"
+  },
+  "dependencies": [
+    {
+      "name": "saz/memcached",
+      "version_requirement": "\u003e\u003d2.0.2"
+    },
+    {
+      "name": "puppetlabs/apache",
+      "version_requirement": "\u003e\u003d0.4.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d2.4.0"
+    },
+    {
+      "name": "puppetlabs/apache",
+      "version_requirement": "\u003e\u003d0.4.0"
+    }
+  ]
+}

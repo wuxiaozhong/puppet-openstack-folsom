@@ -1,0 +1,140 @@
+{
+  "name": "puppetlabs-mysql",
+  "author": "Puppet Labs",
+  "description": "Mysql module",
+  "license": "Apache 2.0",
+  "project_page": "http://github.com/puppetlabs/puppetlabs-mysql",
+  "source": "git://github.com/puppetlabs/puppetlabs-mysql.git",
+  "summary": "Mysql module",
+  "version": "0.5.0",
+  "checksums": {
+    "CHANGELOG": "7ba6d0e1457daac134b7fef4fb1bd82b",
+    "LICENSE": "0e5ccf641e613489e66aa98271dbe798",
+    "Modulefile": "f5406474c7ce1b5dcd45b0b9195072e5",
+    "README.md": "2a019a245a78d5dc70d16f6a39b576f2",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "TODO": "88ca4024a37992b46c34cb46e4ac39e6",
+    "files\\mysqltuner.pl": "7e6fcb6d010c85cec68cffa90e6cc5b6",
+    "lib\\puppet\\parser\\functions\\mysql_password.rb": "3c375e08f7372795ad25d51d43995f96",
+    "lib\\puppet\\provider\\database\\mysql.rb": "1dbf238d3a067c7dcb64208925155ef1",
+    "lib\\puppet\\provider\\database_grant\\mysql.rb": "238559558e71fd0caa1349abbcb56806",
+    "lib\\puppet\\provider\\database_user\\mysql.rb": "92380742a8e634e8bf93285900fd964e",
+    "lib\\puppet\\type\\database.rb": "a5e9e5edb5aa67bbddd17fb9096c9eae",
+    "lib\\puppet\\type\\database_grant.rb": "8a9d41da37ab8450f656b0e50c0f3c1e",
+    "lib\\puppet\\type\\database_user.rb": "0b318312ddf5680aac69bc9bd7c8e346",
+    "manifests\\backup.pp": "7b7da18bd202823dba175f645808deb6",
+    "manifests\\config.pp": "d7b79f59c15f6818176c8cce0dceb0d7",
+    "manifests\\db.pp": "7b4c8960a07c67d18e98e42c2f8680e5",
+    "manifests\\init.pp": "201f0a14d3a83a0bda51cdecae9ea02a",
+    "manifests\\java.pp": "178f7ab9a42f8bf713a3a95cca1c7e44",
+    "manifests\\params.pp": "1e373c6d060b7d2f014904549c4e93d5",
+    "manifests\\python.pp": "9d664f4d575458d4016c175cea055d45",
+    "manifests\\ruby.pp": "c2df3fcc585bc196558ccb3fa3807a89",
+    "manifests\\server.pp": "0acc298d339c4d86dde006599b48f52f",
+    "manifests\\server\\account_security.pp": "ea39eb4add92380ca4eeb075273537f0",
+    "manifests\\server\\monitor.pp": "e849fbec448cf226db4b16843790602e",
+    "manifests\\server\\mysqltuner.pp": "178a1e5f8e24d7a52c175577edad7510",
+    "spec\\classes\\mysql_backup_spec.rb": "7b68d92bad6bd7e54d15a693a0774290",
+    "spec\\classes\\mysql_config_spec.rb": "ca54304509967ae14223a034a3ff110a",
+    "spec\\classes\\mysql_init_spec.rb": "3f9a457a0aca6e6daa09a500929cebc8",
+    "spec\\classes\\mysql_java_spec.rb": "b8bb5edbe8dff978a80a6b9623ef532f",
+    "spec\\classes\\mysql_python_spec.rb": "13f5bedda4d314c1e3017a69615f2a38",
+    "spec\\classes\\mysql_ruby_spec.rb": "4ecdad4a24edbcf06dd4855afdd07806",
+    "spec\\classes\\mysql_server_account_security_spec.rb": "1cb7ee8f0bfe6e91f3ba5cbfa3030572",
+    "spec\\classes\\mysql_server_monitor_spec.rb": "f75d008a06c167414ea04a82554887be",
+    "spec\\classes\\mysql_server_spec.rb": "5940d1820afd3aa5af1e92165fcc99cf",
+    "spec\\defines\\mysql_db_spec.rb": "a0b430b5d8c18bba2e673a83687bed84",
+    "spec\\fixtures\\hiera.yaml": "5c6a20f757d1c94c1233af257b97d3c3",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec\\spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec\\unit\\mysql_password_spec.rb": "c5480e7abb7deb50a3c3e6466721a69d",
+    "spec\\unit\\puppet\\provider\\database_grant\\mysql_spec.rb": "b858f0d6bc256366c3dbd05e28f88bdf",
+    "templates\\my.cnf.erb": "56bdf7a4a6ba87a85280b9cbbb1a8d7f",
+    "templates\\my.cnf.pass.erb": "a4952e72bb8aea85a07274c2c1c0334f",
+    "templates\\mysqlbackup.sh.erb": "7a310239497fcd9726a303a0d25a4f26",
+    "tests\\backup.pp": "caae4da564c1f663341bbe50915a5f7d",
+    "tests\\init.pp": "6b34827ac4731829c8a117f0b3fb8167",
+    "tests\\java.pp": "0ad9de4f9f2c049642bcf08124757085",
+    "tests\\mysql_database.pp": "2a85cd95a9952e3d93aa05f8f236551e",
+    "tests\\mysql_grant.pp": "106e1671b1f68701778401e4a3fc8d05",
+    "tests\\mysql_user.pp": "7aa29740f3b6cd8a7041d59af2d595cc",
+    "tests\\python.pp": "b093828acfed9c14e25ebdd60d90c282",
+    "tests\\ruby.pp": "6c5071fcaf731995c9b8e31e00eaffa0",
+    "tests\\server.pp": "dc12e116371af9d102a7cb2d9d06da0d",
+    "tests\\server\\account_security.pp": "47f79d7ae9eac2bf2134db27abf1db37"
+  },
+  "types": [
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the database."
+        }
+      ],
+      "properties": [
+        {
+          "name": "charset",
+          "doc": "The characterset to use for a database"
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "Manages MySQL database."
+        }
+      ],
+      "name": "database",
+      "doc": "Manage databases."
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The primary key: either user@host for global privilges or user@host/database for database specific privileges"
+        }
+      ],
+      "properties": [
+        {
+          "name": "privileges",
+          "doc": "The privileges the user should have. The possible values are implementation dependent."
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "Uses mysql as database."
+        }
+      ],
+      "name": "database_grant",
+      "doc": "Manage a database user\u0027s rights."
+    },
+    {
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "The name of the user. This uses the \u0027username@hostname\u0027 or username@hostname."
+        }
+      ],
+      "properties": [
+        {
+          "name": "password_hash",
+          "doc": "The password hash of the user. Use mysql_password() for creating such a hash."
+        }
+      ],
+      "providers": [
+        {
+          "name": "mysql",
+          "doc": "manage users for a mysql database."
+        }
+      ],
+      "name": "database_user",
+      "doc": "Manage a database user. This includes management of users password as well as priveleges"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d2.2.1"
+    }
+  ]
+}

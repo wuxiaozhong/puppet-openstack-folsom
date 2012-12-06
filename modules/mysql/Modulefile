@@ -1,0 +1,10 @@
+name 'puppetlabs-mysql'
+version '0.5.0'
+
+author 'Puppet Labs'
+license 'Apache 2.0'
+project_page 'http://github.com/puppetlabs/puppetlabs-mysql'
+source 'git://github.com/puppetlabs/puppetlabs-mysql.git'
+summary 'Mysql module'
+description 'Mysql module'
+dependency 'puppetlabs/stdlib', '>=2.2.1'

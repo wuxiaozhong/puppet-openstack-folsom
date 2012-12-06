@@ -1,0 +1,12 @@
+name 'puppetlabs-horizon'
+version '1.0.0'
+
+author 'Puppet Labs'
+license 'Apache License 2.0'
+project_page 'https://github.com/puppetlabs/puppetlabs-horizon'
+source 'https://github.com/puppetlabs/puppetlabs-horizon'
+summary 'Horizon Dashboard Folsom Module for Puppet'
+dependency 'saz/memcached', '>=2.0.2'
+dependency 'puppetlabs/apache', '>=0.4.0'
+dependency 'puppetlabs/stdlib', '>=2.4.0'
+dependency 'puppetlabs/apache', '>=0.4.0'

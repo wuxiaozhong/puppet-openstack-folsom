@@ -1,0 +1,295 @@
+{
+  "project_page": "https://github.com/puppetlabs/puppetlabs-swift",
+  "license": "Apache License 2.0",
+  "version": "0.1.0",
+  "dependencies": [
+    {
+      "version_requirement": ">= 0.1.0",
+      "name": "puppetlabs/keystone"
+    },
+    {
+      "version_requirement": ">= 0.3.0",
+      "name": "puppetlabs/mysql"
+    },
+    {
+      "version_requirement": ">= 0.1.0",
+      "name": "puppetlabs/rsync"
+    },
+    {
+      "version_requirement": ">= 2.3.0",
+      "name": "puppetlabs/stdlib"
+    },
+    {
+      "version_requirement": ">= 0.1.0",
+      "name": "ripienaar/concat"
+    },
+    {
+      "version_requirement": ">= 2.0.1",
+      "name": "saz/memcached"
+    },
+    {
+      "version_requirement": ">= 1.0.2",
+      "name": "saz/ssh"
+    }
+  ],
+  "summary": "Puppet Labs Swift Module",
+  "source": "https://github.com/puppetlabs/puppetlabs-swift",
+  "checksums": {
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "lib/puppet/provider/swift_ring_builder.rb": "58491f07a00a69df6daf062394edf994",
+    "templates/rsyncd.conf.erb": "21798feea81d0197dbe3ff3f918e4f9e",
+    "files/ringbuilder.sh": "4b3e4fcd784047198e2d5c01a9b0cebe",
+    "manifests/storage/account.pp": "5d91dc6cf53c1754e7e913d371c3f72b",
+    "files/swift-account.conf.upstart": "0bee476e9e3992548857cb02dfc56b11",
+    "spec/classes/swift_ringbuilder_spec.rb": "9a707edbed322c9d79677ff9c7e376a1",
+    "examples/all.pp": "cc0c9d5e8eaa755e3f0b737fd6684bb5",
+    "manifests/keystone/auth.pp": "1956237f27af12da48f6c2a660b7a083",
+    "manifests/proxy/tempauth.pp": "dfd5fbb6e0a21d9608463bc8ae95f2d5",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec/classes/swift_proxy_swauth_spec.rb": "513b9c8b9c135245881b4c31d25ae1cd",
+    "manifests/storage/server.pp": "74053cb37af67f3a1fddd0f6a595a215",
+    "manifests/storage/loopback.pp": "3f73be1f79dcad6c34f9c973752836b8",
+    "lib/puppet/type/ring_object_device.rb": "8e53168c08e6173fa37825779686c87d",
+    "templates/proxy/cache.conf.erb": "d56164ae9799f179059e6f3b9112de28",
+    "manifests/storage/container.pp": "aed933fcb4b311b90494cbc08a318218",
+    "manifests/proxy.pp": "68e6b70464812422392aa4ec5ac66c32",
+    "spec/classes/swift_proxy_catch_errors_spec.rb": "553595d58d2919c574774a1315815885",
+    "manifests/ringserver.pp": "cafec9bd06d897e5c98ebdfad827a6af",
+    "LICENSE": "71032619ad456285e57bef465a6c5a26",
+    "manifests/proxy/swift3.pp": "5f31221db4ea225e769f32ea20dd3747",
+    "manifests/storage/filter/recon.pp": "9f70c4040d7d3276309ea484474d0d6d",
+    "manifests/storage/all.pp": "4974d07a3d7d22c0ef8d140a58db5697",
+    "spec/defines/swift_ringbuilder_create_spec.rb": "5c8bb0b5c8c54597f1ea54538488b6ad",
+    "manifests/ringbuilder/create.pp": "69c95c3a42133eca53d9c08fdb6aad66",
+    "templates/swift.conf.erb": "31f8df0d3bf9d07e73e3b02fb2e6f630",
+    "templates/container-server.conf.erb": "3f980668cd468eaa33a1093b9eeb1b06",
+    "spec/defines/swift_storage_mount_spec.rb": "8b804be5a9eff9ee9fdc12610f8c5906",
+    "ext/swift_keystone_test.rb": "f5abf86ec0a5a5164c36b550d6d2a77e",
+    "manifests/ringsync.pp": "37a618c358fd3af3011141dd3d11d8fd",
+    "templates/account-server.conf.erb": "664c917c5d9e1632258ab8f645d08f4e",
+    "spec/classes/swift_spec.rb": "c5437df0c576b1884265b32166221c04",
+    "ext/swift.rb": "e51c6522d0e7421d0058ffbcaf591e84",
+    "files/swift_keystone_test.rb": "9921c28fffe90ef152603443c7a9a4d3",
+    "files/swift_tester.rb": "f99bba1129af0a8e214b31eb0224924b",
+    "manifests/storage.pp": "51590b399abbb1c6b2bf45d870044255",
+    "spec/classes/swift_storage_spec.rb": "d29784d7a643f9d95f5cec9df8ff8dca",
+    "templates/proxy/catch_errors.conf.erb": "a6199f60fed26eb9bbbbc8f1357b2599",
+    "Modulefile": "ad1b68669e5e1744d4646a194041a091",
+    "manifests/storage/object.pp": "c50f0d8c5c77e623263f14f3a4439da1",
+    "templates/recon.conf.erb": "3d470cab4718d09d9b5848a029d30b23",
+    "README.md": "8d9e118bbe74af16d0ff21669833f187",
+    "spec/defines/swift_storage_server_spec.rb": "12b6dc6bd5b45cc8c3fef9ec8d8aba38",
+    "spec/classes/swift_proxy_spec.rb": "aa9c5295e682952cf66460d6de90410a",
+    "spec/defines/swift_storage_generic_spec.rb": "20561951a793c0c85a28fa15a424b5a4",
+    "lib/puppet/type/ring_container_device.rb": "e44335de1cd8475d37633f3b640c8682",
+    "templates/proxy/keystone.conf.erb": "9099bd31ffed06e69de75092a415e7f0",
+    "manifests/dispersion.pp": "27a10aba007f66ce022ce50a0987d795",
+    "templates/proxy/swift3.conf.erb": "0bd615c13a4cacebad24000bf65247ef",
+    "spec/defines/swift_storage_xfs_spec.rb": "3ccc55443662b9046c9ef32c53a2fcce",
+    "manifests/proxy/ratelimit.pp": "1d5e034cf55337f85518190e61c4f27f",
+    "manifests/proxy/swauth.pp": "6ffca01f8a1ba5171cff19a40e99e3b8",
+    "lib/puppet/provider/ring_object_device/swift_ring_builder.rb": "80511be8cbfd976f8eea0e055e532828",
+    "manifests/proxy/healthcheck.pp": "0a5bad19f5e1b06846d6d3ea04489fa3",
+    "manifests/proxy/keystone.pp": "863e4fb5787d2365c865074b9b088ae5",
+    "manifests/init.pp": "eaf1006b72ca3731efadaeb8d6d35fc7",
+    "spec/classes/swift_storage_account_spec.rb": "cd501a7f6d0cf68c4501b6ab0ea78328",
+    "spec/classes/swift_proxy_s3token_spec.rb": "15363c5a64f237da7d32527620b43337",
+    "manifests/proxy/cache.pp": "4ba72e651ae1b032bfc58ca1c40147a1",
+    "manifests/storage/generic.pp": "923cbe9c945e3c290b991034275586eb",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "manifests/proxy/authtoken.pp": "ed23882264f0f4e7c931910f1da4e55f",
+    "spec/unit/puppet/type/ring_account_device_spec.rb": "9ef84ae14723f0e3af104bfb91b9eada",
+    "spec/defines/swift_storage_loopback_spec.rb": "8f9ca2150b6ec1c0aa9466a55a36514e",
+    "templates/dispersion.conf.erb": "7af8d4c88e5f22c7c9ef55a25b113a7f",
+    "manifests/storage/mount.pp": "d18addf9a3054558cfb46df904b80cd8",
+    "manifests/ringbuilder.pp": "e751c9bb9144596abf8c55a6ca91a326",
+    "examples/site.pp": "bca04938f40bbb239214f539bacc9fe2",
+    "manifests/keystone/dispersion.pp": "c02d92847ad66f1b37d8ffd23d98056a",
+    "spec/classes/swift_xfs_spec.rb": "889866cdc6599641b9df6acd5f02bf81",
+    "spec/classes/swift_storage_object_spec.rb": "f7850c6b4a7e31e51ad47f51a86e9d06",
+    "manifests/storage/node.pp": "03b50870108fc433bef7b13d1ffcd709",
+    "templates/proxy/s3token.conf.erb": "dbb64ce24674656c2c3fa52ed170e3bf",
+    "manifests/proxy/catch_errors.pp": "3653367a162b04534ecfab829b2c0f5c",
+    "lib/puppet/provider/ring_account_device/swift_ring_builder.rb": "2a07483d2a537f0ec98bc5fcc1ae9f09",
+    "templates/proxy/tempauth.conf.erb": "64e8d2de63c741973d8e0fae9adc5918",
+    "spec/classes/swift_proxy_ratelimit_spec.rb": "6eb854f57d9c94414102bed26976880a",
+    "spec/classes/swift_proxy_keystone_spec.rb": "1fe8b055a1044560382ee6e907e30955",
+    "spec/classes/swift_proxy_swift3_spec.rb": "f64fe317b1e32b8ec49d61ad915b0a2f",
+    "templates/object-server.conf.erb": "a6216618669228cb5d821d1b67f52f23",
+    "templates/proxy/swauth.conf.erb": "59c6d06698224c5da46eb028544989c6",
+    "spec/classes/swift_storage_all_spec.rb": "447e942f86a34950ca0e10c5409d8857",
+    "spec/classes/swift_proxy_cache_spec.rb": "ff0225bcf7f1a5aee19f26e17df2dc91",
+    "spec/defines/swift_storage_filter_healthcheck_spec.rb": "502443d546d0eb322eb35c4d26bd2eb8",
+    "spec/classes/swift_proxy_healthcheck_spec.rb": "6319b5d86de95071a8833bc135cd22f3",
+    "spec/classes/swift_keystone_dispersion_spec.rb": "76601ca0bbeb793eda4a4951e34bf7b3",
+    "spec/classes/swift_keystone_auth_spec.rb": "b55a12c5b0e3617db28b04eb23c529d6",
+    "templates/proxy/ratelimit.conf.erb": "d19c8188a283b8ab9288970b6d64a224",
+    "manifests/storage/filter/healthcheck.pp": "36ec4e48a26e7f08a81235fea62670f1",
+    "manifests/proxy/s3token.pp": "7526b6cedc07573f6557809cf3bef78b",
+    "lib/puppet/type/ring_account_device.rb": "9c51c78ef08bfbf40d69700e802f5fc3",
+    "lib/puppet/provider/ring_container_device/swift_ring_builder.rb": "21cc35dc75f2e6e7217d089476af0821",
+    "spec/unit/puppet/type/ring_container_device_spec.rb": "4124bb0fa460d02e3cc43d9f327d0377",
+    "spec/classes/swift_dispersion_spec.rb": "86c7273ae97f40a987c59ed19abfdfb2",
+    "manifests/xfs.pp": "c7194a3d9489f0af4f4285984ee366eb",
+    "manifests/storage/xfs.pp": "7a84fc7d055bef107ee4bea0d50a212b",
+    "spec/classes/swift_proxy_authtoken_spec.rb": "e35860709dc978cec3e34460c5998f6e",
+    "manifests/ringbuilder/rebalance.pp": "cfe7cabc92ebe058ec72f0ada699ea56",
+    "templates/proxy-server.conf.erb": "110ce3f683664c3abd799730a674ea55",
+    "spec/unit/puppet/provider/swift_ring_builder_spec.rb": "5df17bb1d796acc744f0f3ec91b8bac5",
+    "spec/defines/swift_storage_node_spec.rb": "2937f432b0055b928cceca32b50db108",
+    "manifests/params.pp": "daca38ebc370bbde926a55dcd4c86c69",
+    "TODO": "3f797347a546f50365649cf63a44f18c",
+    "spec/classes/swift_storage_container_spec.rb": "27c32eb5739e2a3e50ecb713ea4c1d1c",
+    "spec/defines/swift_storage_filter_recon_spec.rb": "66b94809140729618a594c54a6f64675",
+    "QUESTIONS": "a822a86b9598f20bea376d0ae040b291",
+    "spec/defines/swift_ringbuilder_rebalance_spec.rb": "e6f81da01bd21224b02ac7afb7320fd2",
+    "spec/fixtures/manifests/site.pp": "d41d8cd98f00b204e9800998ecf8427e",
+    "files/swift-object.conf.upstart": "2cb75b9d8934e6f5b602a0ecdf32bbdd",
+    "files/swift-container.conf.upstart": "571635902aa8bf2ed638147ae125bc52",
+    "templates/proxy/healthcheck.conf.erb": "4c8cd2d18bcd82e4052642d0d45fe6f0",
+    "spec/unit/puppet/type/ring_object_device_spec.rb": "f31319d66495e6158c0a78a081373bd2"
+  },
+  "types": [
+    {
+      "parameters": [
+        {
+          "doc": "",
+          "name": "name"
+        }
+      ],
+      "doc": "",
+      "name": "ring_account_device",
+      "properties": [
+        {
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`.",
+          "name": "ensure"
+        },
+        {
+          "doc": "",
+          "name": "zone"
+        },
+        {
+          "doc": "",
+          "name": "weight"
+        },
+        {
+          "doc": "",
+          "name": "meta"
+        },
+        {
+          "doc": "",
+          "name": "id"
+        },
+        {
+          "doc": "",
+          "name": "partitions"
+        },
+        {
+          "doc": "",
+          "name": "balance"
+        }
+      ],
+      "providers": [
+        {
+          "doc": "Required binaries: `swift-ring-builder`.",
+          "name": "swift_ring_builder"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "doc": "",
+          "name": "name"
+        }
+      ],
+      "doc": "",
+      "name": "ring_container_device",
+      "properties": [
+        {
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`.",
+          "name": "ensure"
+        },
+        {
+          "doc": "",
+          "name": "zone"
+        },
+        {
+          "doc": "",
+          "name": "weight"
+        },
+        {
+          "doc": "",
+          "name": "meta"
+        },
+        {
+          "doc": "",
+          "name": "id"
+        },
+        {
+          "doc": "",
+          "name": "partitions"
+        },
+        {
+          "doc": "",
+          "name": "balance"
+        }
+      ],
+      "providers": [
+        {
+          "doc": "Required binaries: `swift-ring-builder`.",
+          "name": "swift_ring_builder"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "doc": "",
+          "name": "name"
+        }
+      ],
+      "doc": "",
+      "name": "ring_object_device",
+      "properties": [
+        {
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`.",
+          "name": "ensure"
+        },
+        {
+          "doc": "",
+          "name": "zone"
+        },
+        {
+          "doc": "",
+          "name": "weight"
+        },
+        {
+          "doc": "",
+          "name": "meta"
+        },
+        {
+          "doc": "",
+          "name": "id"
+        },
+        {
+          "doc": "",
+          "name": "partitions"
+        },
+        {
+          "doc": "",
+          "name": "balance"
+        }
+      ],
+      "providers": [
+        {
+          "doc": "Required binaries: `swift-ring-builder`.",
+          "name": "swift_ring_builder"
+        }
+      ]
+    }
+  ],
+  "description": "Puppet module to install and configure the OpenStack Swift storage service",
+  "author": "Puppet Labs",
+  "name": "puppetlabs-swift"
+}

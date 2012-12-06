@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.cloudsmith.geppetto.pp.dsl.PP.searchPath.useProjectSettings=true
+puppetPath=lib/*\:environments/$environment/*\:manifests/*\:modules/*\:
